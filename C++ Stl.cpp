@@ -154,6 +154,30 @@ void explainPQ()
 
     cout << pq.top(); // prints 2
 }
+void explainLBound()
+{
+    vector<int> v{1, 4, 5, 6, 9, 9};
+
+    int ind = lower_bound(v.begin(), v.end(), 4) - v.begin();
+    int ind1 = lower_bound(v.begin(), v.end(), 7) - v.begin();
+
+    int arr[] = {1, 4, 5, 6, 9, 9};
+
+    int ind3 = lower_bound(arr, arr + 6, 4) - arr;
+    int ind4 = lower_bound(arr, arr + 6, 7) - arr;
+}
+void explainUBound()
+{
+    vector<int> v{1, 4, 5, 6, 9, 9};
+
+    int ind = upper_bound(v.begin(), v.end(), 4) - v.begin();
+    int ind1 = upper_bound(v.begin(), v.end(), 10) - v.begin();
+
+    int arr[] = {1, 4, 5, 6, 9, 9};
+
+    int ind3 = upper_bound(arr, arr + 6, 4) - arr;
+    int ind4 = upper_bound(arr, arr + 6, 10) - arr;
+}
 void explainSet()
 {
     set<int> st;
